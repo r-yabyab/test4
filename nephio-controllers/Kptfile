@@ -1,6 +1,6 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
-metadata: # kpt-merge: nephio-system/nephio-controllers
+metadata:
   name: nephio-controllers
   namespace: nephio-system
   annotations:
