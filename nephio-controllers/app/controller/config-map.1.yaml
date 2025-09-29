@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: default222222222
+  namespace: nephio-system
+  labels:
+    "4321421412342341": "1234234114423"
