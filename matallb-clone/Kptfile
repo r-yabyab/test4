@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /matallb-clone
+  name: matallb-clone
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|matallb-clone'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages.git
+    directory: metallb
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages.git
+    directory: metallb
+    ref: main
+    commit: 5ebaf4ba41ce1bea4de88ef64f7de351f58a47ed
+info:
+  description: metallb package to deploy MetalLB
