@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /nginx-clone
+  name: nginx-clone
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|nginx-clone'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/GoogleContainerTools/kpt-samples.git
+    directory: ingress-nginx
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/GoogleContainerTools/kpt-samples.git
+    directory: ingress-nginx
+    ref: main
+    commit: cfad9c359d776cf0623be90fb076f1748e07027a
+info:
+  description: sample description
